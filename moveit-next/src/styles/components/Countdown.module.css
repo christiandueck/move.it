@@ -90,3 +90,12 @@
     left: 0;
     border-radius: 0 0 4px 4px;
 }
+
+.countdownButton img,
+.countdownButtonActive img {
+    margin-left: 1rem;
+}
+
+.countdownButtonActive:hover img {
+    filter: brightness(0) invert(1);
+}
