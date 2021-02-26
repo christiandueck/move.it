@@ -9,7 +9,8 @@ export function Countdown() {
         hasFinished,
         isActive,
         startCountdown,
-        resetCountdown
+        resetCountdown,
+        percentageCompleted
     } = useContext(CountdownContext)
 
     const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('');
@@ -36,6 +37,9 @@ export function Countdown() {
                 >
                     Ciclo encerrado
                     <img src="icons/check.svg" alt="Stop" />
+                    <div className={styles.completionBar}>
+                        <div className={styles.completedBar} style={{ width: "100%" }}></div>
+                    </div>
                 </button>
             ) : (
                     <>
@@ -47,6 +51,9 @@ export function Countdown() {
                             >
                                 Abandonar ciclo
                                 <img src="icons/stop.svg" alt="Stop" />
+                                <div className={styles.completionBar}>
+                                    <div className={styles.completedBar} style={{ width: `${percentageCompleted}%` }} ></div>
+                                </div>
                             </button>
                         ) : (
                                 <button
