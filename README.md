@@ -15,4 +15,4 @@ Cada desafio tem como recompensa uma pontuação. Com a soma de várias pontuaç
 
 
 ### Exemplo em funcionamento
-https://moveit-iota-two.vercel.app/
+https://moveit.dueck.app
