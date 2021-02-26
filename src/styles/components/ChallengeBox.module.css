@@ -112,4 +112,8 @@
     .challengeBoxContainer {
         padding: 3rem 2rem;
     }
+
+    .challengeActive main {
+        padding: 2rem 0;
+    }
 }

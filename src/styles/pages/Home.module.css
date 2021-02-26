@@ -14,6 +14,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 6.25rem;
     align-content: center;
+    padding-bottom: 2rem;
 }
 
 @media(max-width: 1080px) {
@@ -25,6 +26,5 @@
 @media(max-width: 720px) {
     .container section {
         grid-template-columns: 1fr;
-        gap: 3rem;
     }
 }
