@@ -10,7 +10,7 @@ Cada desafio tem como recompensa uma pontuação. Com a soma de várias pontuaç
 
 
 ### Tecnologias usadas
-- React com o framework Next.js para gerência de estado no servidor.
+- React com o framework Next.js.
 - TypeScript
 
 
