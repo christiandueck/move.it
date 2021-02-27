@@ -34,6 +34,10 @@
     height: 3.5rem;
     width: 100%;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     position: relative;
 }
 
@@ -76,6 +80,9 @@
         
         flex-direction: row; 
         background: var(--white);
+        
+        position: fixed;
+        z-index: 100;
     }
 
     .sidebar nav {

@@ -36,6 +36,10 @@
         flex-direction: column;
     }
 
+    .main {
+        margin-top: 4rem;
+    }
+
     .main section {
         grid-template-columns: 1fr;
     }

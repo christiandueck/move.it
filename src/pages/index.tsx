@@ -20,7 +20,7 @@ interface HomeProps {
   challengesCompleted: number
 }
 
-export default function Home(props) {
+export default function Home(props: HomeProps) {
   return (
     <ChallengesProvider
       level={props.level}
@@ -32,7 +32,7 @@ export default function Home(props) {
           <title>Início | move.it</title>
         </Head>
 
-        <Sidebar />
+        <Sidebar pageName='home' />
         <div className={styles.main}>
           <ExperienceBar />
 
