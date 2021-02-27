@@ -38,7 +38,7 @@ export function Countdown() {
                     Ciclo encerrado
                     <img src="icons/check.svg" alt="Stop" />
                     <div className={styles.completionBar}>
-                        <div className={styles.completedBar} style={{ width: "100%" }}></div>
+                        <div className={styles.completedBar} style={{ width: "100%", transition: "linear 1s" }}></div>
                     </div>
                 </button>
             ) : (

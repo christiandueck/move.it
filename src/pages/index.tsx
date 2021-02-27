@@ -12,6 +12,7 @@ import { ChallengeBox } from "../components/ChallengeBox";
 
 import styles from '../styles/pages/Home.module.css';
 import { useContext } from 'react';
+import { Sidebar } from '../components/Sidebar';
 
 interface HomeProps {
   level: number,
@@ -31,20 +32,23 @@ export default function Home(props) {
           <title>Início | move.it</title>
         </Head>
 
-        <ExperienceBar />
+        <Sidebar />
+        <div className={styles.main}>
+          <ExperienceBar />
 
-        <CountdownProvider>
-          <section>
-            <div>
-              <Profile />
-              <CompletedChallenges />
-              <Countdown />
-            </div>
-            <div>
-              <ChallengeBox />
-            </div>
-          </section>
-        </CountdownProvider>
+          <CountdownProvider>
+            <section>
+              <div>
+                <Profile />
+                <CompletedChallenges />
+                <Countdown />
+              </div>
+              <div>
+                <ChallengeBox />
+              </div>
+            </section>
+          </CountdownProvider>
+        </div>
 
       </div>
     </ChallengesProvider >
