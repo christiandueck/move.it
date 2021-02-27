@@ -1,68 +1,70 @@
 import Head from 'next/head';
-import { GetServerSideProps } from 'next';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
-import { ChallengesProvider } from '../contexts/ChallengesContext';
-import { CountdownContext, CountdownProvider } from '../contexts/CountdownContext';
+import styles from '../styles/pages/Login.module.css';
 
-import { CompletedChallenges } from "../components/CompletedChallenges";
-import { Countdown } from "../components/Countdown";
-import { ExperienceBar } from "../components/ExperienceBar";
-import { Profile } from '../components/Profile';
-import { ChallengeBox } from "../components/ChallengeBox";
+export default function Login() {
+  const route = useRouter();
 
-import styles from '../styles/pages/Home.module.css';
-import { useContext } from 'react';
-import { Sidebar } from '../components/Sidebar';
+  const [username, setUsername] = useState('');
+  const [buttonActive, setButtonActive] = useState(false);
 
-interface HomeProps {
-  level: number,
-  currentExperience: number,
-  challengesCompleted: number
-}
+  const toggleButtonActive = useEffect(() => {
+    if (username != '') {
+      setButtonActive(true);
+    } else {
+      setButtonActive(false);
+    }
+  }, [username])
 
-export default function Home(props: HomeProps) {
+  function signIn() {
+    if (buttonActive) {
+      route.push('/home')
+    }
+  }
+
   return (
-    <ChallengesProvider
-      level={props.level}
-      currentExperience={props.currentExperience}
-      challengesCompleted={props.challengesCompleted}
-    >
-      <div className={styles.container}>
-        <Head>
-          <title>Início | move.it</title>
-        </Head>
 
-        <Sidebar pageName='home' />
-        <div className={styles.main}>
-          <ExperienceBar />
+    <div className={styles.container}>
+      <Head>
+        <title>Login | move.it</title>
+      </Head>
 
-          <CountdownProvider>
-            <section>
-              <div>
-                <Profile />
-                <CompletedChallenges />
-                <Countdown />
-              </div>
-              <div>
-                <ChallengeBox />
-              </div>
-            </section>
-          </CountdownProvider>
+      <div className={styles.main}>
+
+        <div className={styles.loginContainer}>
+          <div className={styles.loginLogo}>
+            <img src="./logoLogin.svg" alt="move.it logo" />
+          </div>
+
+          <h2>Bem-vindo</h2>
+
+          <div className={styles.text}>
+            <img src="./icons/Github.svg" alt="logo github" />
+            <p>Faça login com seu GitHub para começar</p>
+          </div>
+
+          <div className={styles.inputGroup}>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Digite seu username"
+              onChange={e => setUsername(e.target.value)}
+            />
+            <button
+              type="button"
+              className={`${styles.button} ${buttonActive && styles.active}`}
+              onClick={signIn}
+            >
+              <img src="./icons/arrow.svg" alt="sign-in button" />
+            </button>
+          </div>
         </div>
 
       </div>
-    </ChallengesProvider >
+
+    </div>
   )
-}
-
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { level, currentExperience, challengesCompleted } = ctx.req.cookies;
-
-  return {
-    props: {
-      level: Number(level ?? 1),
-      currentExperience: Number(currentExperience ?? 0),
-      challengesCompleted: Number(challengesCompleted ?? 0)
-    }
-  }
 }
