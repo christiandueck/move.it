@@ -34,3 +34,6 @@ yarn-error.log*
 .vercel
 
 .vercel
+
+# git repository readme content
+moveit.gif
