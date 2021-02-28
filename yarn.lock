@@ -103,6 +103,14 @@
   resolved "https://registry.yarnpkg.com/@opentelemetry/context-base/-/context-base-0.14.0.tgz#c67fc20a4d891447ca1a855d7d70fa79a3533001"
   integrity sha512-sDOAZcYwynHFTbLo6n8kIbLiVF3a3BLkrmehJUyEbT9F+Smbi47kLGS2gG2g0fjBLR/Lr1InPD7kXL7FaTqEkw==
 
+"@types/babel-plugin-react-html-attrs@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@types/babel-plugin-react-html-attrs/-/babel-plugin-react-html-attrs-3.0.2.tgz#19487f00547a8afcdde41fa2538e18be84d82f97"
+  integrity sha512-Meo+eg7uY+LTuPe3ro166TNim/0lqfklzYzGFDzqpEeBZNngqbtidM7XmzvDv5N2TGAXxY+HT16Ai5E2w+tp4Q==
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^3.0.2"
+
 "@types/js-cookie@^2.2.6":
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/@types/js-cookie/-/js-cookie-2.2.6.tgz#f1a1cb35aff47bc5cfb05cb0c441ca91e914c26f"
@@ -215,6 +223,11 @@ ast-types@0.13.2:
   version "0.13.2"
   resolved "https://registry.yarnpkg.com/ast-types/-/ast-types-0.13.2.tgz#df39b677a911a83f3a049644fb74fdded23cea48"
   integrity sha512-uWMHxJxtfj/1oZClOxDEV1sQ1HCDkA4MG8Gr69KKeBjEVH0R84WlejZ0y2DcwyBlpAEMltmVYkVgqfLFb2oyiA==
+
+babel-plugin-react-html-attrs@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/babel-plugin-react-html-attrs/-/babel-plugin-react-html-attrs-3.0.5.tgz#a4948301a3b5970cfa18cb586b220be98d5ac5e0"
+  integrity sha512-o6RClilXl0T7HfVsHUE+xHV0HMBX0SzB94MMIrT52089CA6Sd4eXkY7jLHknQktFQ5UHpSXYPP0x7fUnIY97Qg==
 
 babel-plugin-syntax-jsx@6.18.0:
   version "6.18.0"

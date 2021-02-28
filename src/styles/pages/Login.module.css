@@ -68,7 +68,7 @@
     border: none;
     border-radius: 5px 0 0 5px;
     background: linear-gradient(90deg, #4953B8 0%, rgba(73, 83, 184, 0.2) 100%);
-    /*width: 21.25rem;*/
+    width: 21.25rem;
     padding: 0 1.8rem;
     color: var(--white);
     font-size: 1.25rem;
@@ -84,6 +84,7 @@
     box-sizing: border-box;
     border: 0.15rem solid #414AA3;
     padding-left: calc(1.8rem - 0.15rem);
+    padding-right: calc(1.8rem - 0.15rem);
 }
 
 .inputGroup .button {
@@ -124,8 +125,7 @@
         margin: 0 auto;
     }
 
-    .inputGroup {
-        max-width: 100%;
-        
+    .inputGroup input {
+        width: 100%;
     }
 }
