@@ -1,4 +1,6 @@
 # move.it
+<img src="https://github.com/christiandueck/move.it/blob/main/moveit.gif?raw=true">
+
 Aplicação web desenvolvida durante o evento Next Level Week 4 da Rocketseat, na trila de React (Front-end)
 
 
