@@ -9,6 +9,11 @@ export default class MyDocument extends Document {
 
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
                     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@600&display=swap" rel="stylesheet" />
+
+                    <meta property="og:image" content="https://moveit.dueck.app/moveit.png" />
+                    <meta property="og:image:type" content="image/png" />
+                    <meta property="og:image:width" content="575" />
+                    <meta property="og:image:height" content="427" />
                 </Head>
                 <body>
                     <Main />
